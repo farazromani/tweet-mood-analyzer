@@ -2,18 +2,16 @@
 
 Using IBM Watson's Tone Analyzer, this simple Python script analyzes a Tweet for it's mood, such as anger, sadness, etc.
 
-## How to Build
+## Prerequisites
 
-### Prerequisites
-
-#### Python 3.X
+### Python 3.X
 With the following packages:
 ```bash
 pip install watson_developer_cloud
 pip install python-twitter
 ```
 
-#### IBM Watson Bluemix & Tone Analyzer Setup
+### IBM Watson Bluemix & Tone Analyzer Setup
 1. Create an account on [IBM Watson's Bluemix](https://www.ibm.com/watson/developercloud/tone-analyzer.html) website.
 2. After logging in, click on *Catalog* (top-right)
 3. On the left-hand side, click on three-horizontal menu accordion and select **Services** > **Watson**.
@@ -21,7 +19,7 @@ pip install python-twitter
 5. Select **Tone Analyzer**.
 6. Copy the `username` and `password`. We'll use that to make calls to the service in our Python script.
 
-#### Twitter Developer Account Setup
+### Twitter Developer Account Setup
 1. If you don't already, create a regular Twitter account.
 2. Then, go to https://dev.twitter.com/resources/signup and fill out the form.
 3. After you've gone through the registration process, navigate to https://apps.twitter.com/app/new and create a new app.
@@ -31,7 +29,7 @@ pip install python-twitter
 	- Access Token
 	- Access Token Secret
 
-### Running the Script
+## Running the Script
 
 You'll need to pass in the following **required** environment variables when calling the Python script.
 
@@ -46,12 +44,12 @@ You'll need to pass in the following **required** environment variables when cal
 | `watson_tau`         	| Watson Tone Analyzer Username                                                                  	|
 | `watson_tap`         	| Watson Tone Analyzer Password                                                                  	|
 
-#### Sample Input
+### Sample Input
 ```python
 tck="stMjbgJDPJq6g9sLK66lf3FOOBAR" tcs="req79u8cBSryBMzyc7juDCwOrw9eBaNNhms76gshRPrS6ToFOOBAR" tat="14684320-IJuCE47ckjQbl6EzrFyKpo3XQrgmgbFPjPjIxUFOOBAR" tats="ij50IGYtMPcBnA7ESyCiAqHrPjC3KyUBDiVvUMYl6gFOOBAR" watson_tau="5c9028eb-1328-4924-a298-c737c6e9dFOOBAR" watson_tap="wZiIA2t2aFOOBAR" ttc=10 tun=realdonaldtrump python __init__.py
 ```
 
-#### Sample Output
+### Sample Output
 ```
 Tweet #1: My representatives had a great meeting w/ the Hispanic Chamber of Commerce at the WH today. Look forward to tremendous growth &amp; future mtgs!
 Anger: 2.69 Disgust: 1.15 Fear: 2.61 Joy: 76.03 Sadness: 7.2 
