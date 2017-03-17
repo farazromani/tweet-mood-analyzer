@@ -27,6 +27,7 @@ tone_analyzer = ToneAnalyzerV3(
     password=ta_password,
     version='2016-02-11')
 
+# Remove emoticons from Tweet
 emoji_pattern = re.compile("["
     u"\U0001F600-\U0001F64F"  # emoticons
     u"\U0001F300-\U0001F5FF"  # symbols & pictographs
@@ -39,8 +40,9 @@ for index, s in enumerate(statuses):
     print("Tweet #" + str(index + 1) + ": " + str(emoji_pattern.sub(r'', s.text.strip())))
     
     document_tone = tone_analyzer_result["document_tone"]
-        
     for tone_categories in document_tone["tone_categories"]:
+
+        # Dictionary to store 
         emotions = {}
         
         if tone_categories["category_id"] == "emotion_tone":
