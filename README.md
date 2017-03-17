@@ -5,7 +5,13 @@ Using IBM Watson's Tone Analyzer, this simple Python script analyzes a Tweet for
 ## How to Build
 
 ### Prerequisites
-- Python 3.X
+
+#### Python 3.X
+With the following packages:
+```bash
+pip install watson_developer_cloud
+pip install python-twitter
+```
 
 #### IBM Watson Bluemix & Tone Analyzer Setup
 1. Create an account on [IBM Watson's Bluemix](https://www.ibm.com/watson/developercloud/tone-analyzer.html) website.
