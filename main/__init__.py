@@ -15,13 +15,16 @@ twitter_tweet_count = os.environ['ttc']
 ta_username = os.environ['watson_tau']
 ta_password = os.environ['watson_tap']
 
+# Initialize Twitter SDK
 api = twitter.Api(consumer_key=twitter_consumer_key,
                     consumer_secret=twitter_consumer_secret,
                     access_token_key=twitter_access_token,
                     access_token_secret=twitter_access_token_secret)
 
+# Make Twitter SDK call to retrieve Tweets
 statuses = api.GetUserTimeline(screen_name=twitter_username, count=twitter_tweet_count)
 
+# Initialize Tone Analyzer SDK
 tone_analyzer = ToneAnalyzerV3(
     username=ta_username,
     password=ta_password,
@@ -35,14 +38,18 @@ emoji_pattern = re.compile("["
     u"\U0001F1E0-\U0001F1FF"  # flags (iOS)
                        "]+", flags=re.UNICODE)
 
+# Iterate through each Tweet
 for index, s in enumerate(statuses):
+  
+    # Analyize the Tweet string
     tone_analyzer_result = tone_analyzer.tone(text=s.text)
+    
     print("Tweet #" + str(index + 1) + ": " + str(emoji_pattern.sub(r'', s.text.strip())))
     
     document_tone = tone_analyzer_result["document_tone"]
     for tone_categories in document_tone["tone_categories"]:
 
-        # Dictionary to store 
+        # Store emotional attributes
         emotions = {}
         
         if tone_categories["category_id"] == "emotion_tone":
