@@ -68,3 +68,9 @@ Anger: 0.29 Disgust: 10.77 Fear: 1.37 Joy: 71.5 Sadness: 5.83
 Tweet #5: A budget that puts #AmericaFirst must make safety its no. 1 priority—without safety there can be no prosperity: https://t.co/9lxx1iQo7m
 Anger: 6.52 Disgust: 48.21 Fear: 9.53 Joy: 11.94 Sadness: 26.82 
 ```
+
+## Known Bugs & Planned Improvements
+
+ - **String parsing error** -- some strings cause the Tone Analyzer SDK to crash. It's likely due to unsupported characters. More investigation is needed.
+ - **Simpler UX** -- the current implementation isn't very user-friendly with having to pass in credentials via environment variables. A simpler initialization (maybe set-by-set) might be better.
+ - **Free *Tone Analyzer* alternative** -- although the IBM Watson Tone Analyzer works as expected, the 30-day free trial isn't ideal for long-term usage. I'll need to investigate equivalent free alternative services.
