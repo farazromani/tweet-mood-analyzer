@@ -46,25 +46,36 @@ You'll need to pass in the following **required** environment variables when cal
 
 ### Sample Input
 ```python
-tck="stMjbgJDPJq6g9sLK66lf3FOOBAR" tcs="req79u8cBSryBMzyc7juDCwOrw9eBaNNhms76gshRPrS6ToFOOBAR" tat="14684320-IJuCE47ckjQbl6EzrFyKpo3XQrgmgbFPjPjIxUFOOBAR" tats="ij50IGYtMPcBnA7ESyCiAqHrPjC3KyUBDiVvUMYl6gFOOBAR" watson_tau="5c9028eb-1328-4924-a298-c737c6e9dFOOBAR" watson_tap="wZiIA2t2aFOOBAR" ttc=10 tun=realdonaldtrump python __init__.py
+tck="<twitter-consumer-key>" tcs="<twitter-consumer-secret>" tat="<twitter-access-token>" tats="twitter-access-token-secret" watson_tau="<tone-analyzer-username>" watson_tap="<tone-analyzer-password>" ttc=<tweet-count> tun=<twitter-username> python twitter-mood-analyzer.py
 ```
 
 ### Sample Output
 ```
-Tweet #1: My representatives had a great meeting w/ the Hispanic Chamber of Commerce at the WH today. Look forward to tremendous growth &amp; future mtgs!
-Anger: 2.69 Disgust: 1.15 Fear: 2.61 Joy: 76.03 Sadness: 7.2 
-
-Tweet #2: Great progress on healthcare. Improvements being made - Republicans coming together!
-Anger: 5.88 Disgust: 8.98 Fear: 1.35 Joy: 72.01 Sadness: 3.01 
-
-Tweet #3: RT @USHCC: USHCC was delighted to host @IvankaTrump for a roundtable discussion w/ Hispanic women biz owners today in Washington #USHCCLegi…
-Anger: 5.26 Disgust: 25.48 Fear: 2.72 Joy: 44.62 Sadness: 11.12 
-
-Tweet #4: An honor to welcome the Taoiseach of Ireland, @EndaKennyTD to the @WhiteHouse today with @VP Pence.  https://t.co/J3iTl2iSiQ
-Anger: 0.29 Disgust: 10.77 Fear: 1.37 Joy: 71.5 Sadness: 5.83 
-
-Tweet #5: A budget that puts #AmericaFirst must make safety its no. 1 priority—without safety there can be no prosperity: https://t.co/9lxx1iQo7m
-Anger: 6.52 Disgust: 48.21 Fear: 9.53 Joy: 11.94 Sadness: 26.82 
+TWEET #1
+Great meeting with the @RepublicanStudy Committee this morning at the @WhiteHouse! https://t.co/8Y2UoHoYaY
+Anger: 1.72
+Disgust: 3.04
+Fear: 1.7
+Joy: 68.48
+Sadness: 11.89
+---------------
+TWEET #2
+"The President Changed. So Has Small Businesses' Confidence"
+https://t.co/daTGjPmYeJ
+Anger: 1.41
+Disgust: 11.91
+Fear: 4.22
+Joy: 66.56
+Sadness: 5.04
+---------------
+TWEET #3
+North Korea is behaving very badly. They have been "playing" the United States for years. China has done little to help!
+Anger: 13.57
+Disgust: 52.64
+Fear: 6.52
+Joy: 1.07
+Sadness: 41.74
+---------------
 ```
 
 ## Known Bugs & Planned Improvements
