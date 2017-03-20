@@ -1,4 +1,4 @@
-# Twitter Mood Analyzer
+# Tweet Mood Analyzer
 
 Using IBM Watson's Tone Analyzer, this simple Python script analyzes a Tweet for it's mood, such as anger, sadness, etc.
 
